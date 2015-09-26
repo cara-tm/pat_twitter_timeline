@@ -1,0 +1,71 @@
+#@public
+#@language en-gb, en-us
+reply => Reply
+retweet => Retweet
+favourite => Favourite
+january => January
+february => February
+march => March
+april => April
+may => May
+june => June
+july => July
+august => August
+september => September
+october => October
+november => November
+december => December
+
+#@public
+#@language fr-fr
+reply => Répondre
+retweet => Retweeter
+favourite => Favori
+january => janvier
+february => février
+march => mars
+april => avril
+may => mai
+june => juin
+july => juillet
+august => août
+september => septembre
+october => octobre
+november =>novembre
+december => décembre
+
+#@public
+#@language de-de
+reply => Antworten
+retweet => Retweet
+favourite => Favorit
+january => Januar
+february => Februar
+march => März
+april => April
+may => Mai
+june => Juni
+july => Juli
+august => August
+september => September
+october => Oktober
+november =>November
+december => Dezember
+
+#@public
+#@language es-es
+reply => Responder
+retweet => Retweet
+favourite => Favoritos
+january => enero
+february => febrero
+march => marzo
+april => abril
+May => mayo
+june => junio
+july => julio
+august => agosto
+september => septiembre
+october => octubre
+november => noviembre
+december => diciembre
