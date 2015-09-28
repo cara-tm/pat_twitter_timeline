@@ -90,7 +90,8 @@ EOF;
  * Load proper language strings
  *
  * @param  string   $lang   ISO country code
- * @return string   $str    translation
+ * @param  string   $str    word
+ * @return string   translation
  */
 function _pat_txt($lang, $str)
 {
