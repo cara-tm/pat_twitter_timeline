@@ -31,7 +31,7 @@ july => juillet
 august => août
 september => septembre
 october => octobre
-november =>novembre
+november => novembre
 december => décembre
 
 #@public
@@ -49,7 +49,7 @@ july => Juli
 august => August
 september => September
 october => Oktober
-november =>November
+november => November
 december => Dezember
 
 #@public
