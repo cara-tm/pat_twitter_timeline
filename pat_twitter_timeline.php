@@ -46,11 +46,11 @@ function pat_twitter_timeline($atts)
 		'language' 		=> $prefs['lang'],
 	), $atts));
 
-	$gTxt = 'gTxt';
+	$txt = '_pat_txt';
 
-	$language !== $prefs['lang'] ? load_lang($language, false) : '';
+	$language !== $prefs['language'] ? $prefs['language'] = load_lang($language) : '';
 	$lang = strtolower( substr($language, 0, 2) );
-	$list = 'months_'.$lang.'=["'.gTxt('january').'","'.gTxt('february').'","'.gTxt('march').'","'.gTxt('april').'","'.gTxt('may').'","'.gTxt('june').'","'.gTxt('july').'","'.gTxt('august').'","'.gTxt('september').'","'.gTxt('october').'","'.gTxt('november').'","'.gTxt('december').'"]';
+	$list = 'months_'.$lang.'=["'.$txt($language, 'january').'","'.$txt($language, 'february').'","'.$txt($language, 'march').'","'.$txt($language, 'april').'","'.$txt($language, 'may').'","'.$txt($language, 'june').'","'.$txt($language, 'july').'","'.$txt($language, 'august').'","'.$txt($language, 'september').'","'.$txt($language, 'october').'","'.$txt($language, 'november').'","'.$txt($language, 'december').'"]';
 
 	$out = <<<EOF
 
@@ -69,7 +69,7 @@ b[e]&&D)a.push(c[e].getElementsByClassName("e-entry-title")[0]),m.push(c[e].getA
 g.push(n(c[e],"p-author")[0]),f.push(n(c[e],"dt-updated")[0]),t.push(n(c[e],"permalink")[0]),void 0!==n(c[e],"inline-media")[0]?h.push(n(c[e],"inline-media")[0]):h.push(void 0),0<n(c[e],"retweet-credit").length?b.push(!0):b.push(!1),e++;a.length>k&&(a.splice(k,a.length-k),g.splice(k,g.length-k),f.splice(k,f.length-k),b.splice(k,b.length-k),h.splice(k,h.length-k),t.splice(k,t.length-k));c=[];e=a.length;for(b=0;b<e;){if("string"!==typeof y){var d=f[b].getAttribute("datetime"),l=new Date(f[b].getAttribute("datetime").replace(/-/g,
 "/").replace("T"," ").split("+")[0]),d=y(l,d);f[b].setAttribute("aria-label",d);if(a[b].innerText)if(z)f[b].innerText=d;else{var l=document.createElement("p"),I=document.createTextNode(d);l.appendChild(I);l.setAttribute("aria-label",d);f[b]=l}else f[b].textContent=d}d="";C?(r&&(p(a[b]),q&&p(g[b])),q&&(d+='<div class="user">'+w(g[b].innerHTML)+"</div>"),d+='<p class="tweet">'+w(a[b].innerHTML)+"</p>",v&&(d=G?d+('<p class="timePosted"><a href="'+t[b]+'">'+f[b].getAttribute("aria-label")+"</a></p>"):
 d+('<p class="timePosted">'+f[b].getAttribute("aria-label")+"</p>"))):a[b].innerText?(q&&(d+='<p class="user">'+g[b].innerText+"</p>"),d+='<p class="tweet">'+a[b].innerText+"</p>",v&&(d+='<p class="timePosted">'+f[b].innerText+"</p>")):(q&&(d+='<p class="user">'+g[b].textContent+"</p>"),d+='<p class="tweet">'+a[b].textContent+"</p>",v&&(d+='<p class="timePosted">'+f[b].textContent+"</p>"));E&&(d+='<p class="interact"><a href="https://twitter.com/intent/tweet?in_reply_to='+m[b]+'" class="twitter_reply_icon"'+
-(r?' target="_blank">':">")+'{$gTxt('reply')}</a> <a href="https://twitter.com/intent/retweet?tweet_id='+m[b]+'" class="twitter_retweet_icon"'+(r?' target="_blank">':">")+'{$gTxt('retweet')}</a> <a href="https://twitter.com/intent/favorite?tweet_id='+m[b]+'" class="twitter_fav_icon"'+(r?' target="_blank">':">")+"{$gTxt('favourite')}</a></p>");F&&void 0!==h[b]&&(l=h[b],void 0!==l?(l=l.innerHTML.match(/data-srcset="([A-z0-9%_\.-]+)/i)[0],l=decodeURIComponent(l).split('"')[1]):l=void 0,d+='<div class="media"><img src="'+l+'" alt="Image from tweet" /></div>');
+(r?' target="_blank">':">")+'{$txt($language, 'reply')}</a> <a href="https://twitter.com/intent/retweet?tweet_id='+m[b]+'" class="twitter_retweet_icon"'+(r?' target="_blank">':">")+'{$txt($language, 'retweet')}</a> <a href="https://twitter.com/intent/favorite?tweet_id='+m[b]+'" class="twitter_fav_icon"'+(r?' target="_blank">':">")+"{$txt($language, 'favorite')}</a></p>");F&&void 0!==h[b]&&(l=h[b],void 0!==l?(l=l.innerHTML.match(/data-srcset="([A-z0-9%_\.-]+)/i)[0],l=decodeURIComponent(l).split('"')[1]):l=void 0,d+='<div class="media"><img src="'+l+'" alt="{$txt($language, 'Image from tweet')}" /></div>');
 c.push(d);b++}if(null===A){a=c.length;g=0;f=document.getElementById(B);for(h="<ul>";g<a;)h+="<li>"+c[g]+"</li>",g++;f.innerHTML=h+"</ul>"}else A(c);x=!1;0<u.length&&(H.fetch(u[0]),u.splice(0,1))}};return window.twitterFetcher=H});var $id={
 "id":'$account',"domId":'$id',"maxTweets":$max_tweets,"enableLinks":$enable_links,"showUser":$show_user,"showTime":$show_time,"showRetweet":$show_retweets,"showInteraction":$show_interaction,"showImages":$show_images,"dateFunction":dateFormatter,"linksInNewWindow":$new_window,"showPermalinks":$show_permalinks,"lang":"$lang"};function dateFormatter(date){var day=date.getDate(),month=date.getMonth(),year=date.getFullYear(),{$list};return day+" "+months_{$lang}[month]+" "+year;};twitterFetcher.fetch($id);</script>
 
@@ -80,6 +80,27 @@ EOF;
  		if ( empty($value) )
 			return trigger_error('missing required attibute', E_USER_WARNING);
 	}
+
+	return $out;
+
+}
+
+
+/**
+ * Load proper language strings
+ *
+ * @param  string   $lang   ISO country code
+ * @return string   $str    translation
+ */
+function _pat_txt($lang, $str)
+{
+
+	global $prefs;
+
+	if ($lang !== $prefs['language'])
+		$out = $prefs['language'][$str];
+	else
+		$out = gTxt($str);
 
 	return $out;
 
