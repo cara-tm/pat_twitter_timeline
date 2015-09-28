@@ -2,7 +2,7 @@
 #@language en-gb, en-us
 reply => Reply
 retweet => Retweet
-favourite => Favourite
+favorite => Favorite
 january => January
 february => February
 march => March
@@ -20,7 +20,7 @@ december => December
 #@language fr-fr
 reply => Répondre
 retweet => Retweeter
-favourite => Favori
+favorite => Favori
 january => janvier
 february => février
 march => mars
@@ -38,7 +38,7 @@ december => décembre
 #@language de-de
 reply => Antworten
 retweet => Retweet
-favourite => Favorit
+favorite => Favorit
 january => Januar
 february => Februar
 march => März
@@ -56,7 +56,7 @@ december => Dezember
 #@language es-es
 reply => Responder
 retweet => Retweet
-favourite => Favoritos
+favorite => Favoritos
 january => enero
 february => febrero
 march => marzo
