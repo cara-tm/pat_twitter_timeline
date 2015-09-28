@@ -43,7 +43,7 @@ function pat_twitter_timeline($atts)
 		'show_images' 		=> true,
 		'new_window' 		=> true,
 		'show_permalinks' 	=> true,
-		'language' 		=> $prefs['lang'],
+		'language' 		=> $prefs['language'],
 	), $atts));
 
 	$txt = '_pat_txt';
