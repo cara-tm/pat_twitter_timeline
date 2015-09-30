@@ -34,6 +34,7 @@ Allow you to display your Twitter timelines in style. Browsers support: IE 7+ an
 >    `show_permalinks`: boolean (optional). Set __false__ if you don't want time to be permalinked. Default: __true__.
 > 
 >    `show_year`: boolean (optional). Set __false__ if you don't want to display the year for the Tweet date. Default: __true__.
+> 
 >    `language`: string (optional). Sets the language for translation (i18n support). Default: __TXP lang prefs__.
 > 
 
