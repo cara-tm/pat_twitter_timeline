@@ -2,7 +2,7 @@
 
 Textpattern CMS plugin.
 
-Allow you to display your Twitter timelines in style. Browsers support: IE 7+ and all major modern browsers.
+Allow you to display your Twitter timelines with style. Browsers support: IE 7+ and all major modern browsers.
 
 ## Usage
 
