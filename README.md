@@ -6,7 +6,7 @@ Allow you to display your Twitter timelines with style. Browsers support: IE 7+ 
 
 ## Usage
 
-    <txp:pat_twitter_timeline id="" account="" max_tweets="" enable_links="" show_time="" show_user="" show_retweets="" show_interaction="" show_images="" new_window="" show_permalinks="" lang="" />
+    <txp:pat_twitter_timeline id="" account="" max_tweets="" enable_links="" show_time="" show_user="" show_retweets="" show_interaction="" show_images="" new_window="" show_permalinks="" show_year="" lang="" />
 
 
 ## Attributes
