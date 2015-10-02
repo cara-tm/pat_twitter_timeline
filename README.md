@@ -6,7 +6,7 @@ Allow you to display your Twitter timelines with style, the way you want. Browse
 
 ## Usage
 
-    <txp:pat_twitter_timeline id="" account="" max_tweets="" enable_links="" show_time="" show_user="" show_retweets="" show_interaction="" show_images="" new_window="" show_permalinks="" show_year="" lang="" />
+    <txp:pat_twitter_timeline id="" account="" max_tweets="" enable_links="" show_time="" show_user="" show_retweets="" show_interaction="" show_images="" new_window="" show_permalinks="" show_year="" language="" />
 
 
 ## Attributes
@@ -42,6 +42,9 @@ Allow you to display your Twitter timelines with style, the way you want. Browse
 
 1°. Display your timeline into a "Flat" blue square with a big white Twitter icon on the top (perfect place: your website sidebar):
 
+    /*
+    Assuming your id attribute is set to "timeline1"
+    */
     #timeline1 ul {padding-left:0 !important}
     #timeline1 ul li {
         margin:2em 0px;
@@ -57,6 +60,9 @@ Allow you to display your Twitter timelines with style, the way you want. Browse
 
 2°. Display your timeline text inline with a blue "Retweet" button (perfect place: your website footer):
 
+    /*
+    Assuming your id attribute is set to "timeline2"
+    */
     #timeline2 ul {list-style:none}
     #timeline2 .interact {margin-right: 20%;text-align: right}
     #timeline2 .twitter_reply_icon,#timeline2 .twitter_fav_icon {display: none}
