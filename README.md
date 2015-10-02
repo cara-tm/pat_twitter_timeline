@@ -2,7 +2,7 @@
 
 Textpattern CMS plugin.
 
-Allow you to display your Twitter timelines with style. Browsers support: IE 7+ and all major modern browsers.
+Allow you to display your Twitter timelines with style, the way you want. Browsers support: IE 7+ and all major modern browsers.
 
 ## Usage
 
@@ -38,3 +38,36 @@ Allow you to display your Twitter timelines with style. Browsers support: IE 7+ 
 >    `language`: string (optional). Sets the language for translation (i18n support). Default: __TXP lang prefs__.
 > 
 
+## CSS styles examples
+
+1°. Display your timeline into a "Flat" blue square with a big white Twitter icon on the top (perfect place: your website sidebar):
+
+    #timeline1 ul {padding-left:0 !important}
+    #timeline1 ul li {
+        margin:2em 0px;
+        padding:10em 1em 1em;
+        background: #55acee url("../images/twitter-icon-128x128.png") no-repeat scroll center 20px;
+        color:#fff
+    }
+    #timeline1 .tweet,#timeline1 a {color: #fff}
+    #timeline1 .user,#timeline1 .timePosted {margin: 1em 0;text-align: center}
+    #timeline1 .interact {text-align: center}
+    #timeline1 .interact a {margin: 0 .5em;text-decoration: underline !important}
+    #timeline1 .interact a:hover {text-decoration: none !important}
+
+2°. Display your timeline text inline with a blue "Retweet" button (perfect place: your website footer):
+
+    #timeline2 ul {list-style:none}
+    #timeline2 .interact {margin-right: 20%;text-align: right}
+    #timeline2 .twitter_reply_icon,#timeline2 .twitter_fav_icon {display: none}
+    #timeline2 .twitter_retweet_icon {
+        display: inline-block;
+        width: auto;
+        height: 2em;
+        padding: 0px 8px 0px 24px;
+        background: #55acee url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABCUlEQVQ4jaWSvS4EURiGn2+y2UK2FHEBspWoNxoiqo1CIeICXICIu1Bu4QJUGo0KjUSEhih1ChGiIiQKNo9iZ9idzIxd3vI73/tzznvgn4hhltRJYBmoA0cRcZPOG6gT6mYFeV598Qcf6o56rM6ittODbbWWI9fUO4txqW6gtnLDtpqkAs0SsuqhOoaapMR+3Ku7aqdCYD2LuaAeqN2K5SIsZQLj6uuI5K69Zr4fa1V9H0HgLF9VQ92zV9EwWMm4CUBEvAFPwECNJTgB9os+DOqaelrhfDtw9yyBCjAFNIHpEudrYC4iHvPOi+p5heuDuqXWi1SjL8EM0AKyiM/AFXAREZ+/vsxf8QWh+QbKezZPWwAAAABJRU5ErkJggg==") no-repeat scroll 5px 50%;
+        color: #fff;
+        font-size: .9em;
+        line-height: 2em;
+        border-radius:3px
+    }
