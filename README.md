@@ -15,7 +15,7 @@ Allow you to display your Twitter timelines with style, the way you want. Browse
 
 >    `id`: string (optional). The unique ID attribute of the HTML markup for the Twitter timeline. To be used only if you want multiple instance of this plugin. Default: __timeline1__.
 > 
->    `account`: integer (required). Your Twitter account number. This is a 18 digit number. You can find it when creation a new Widget from your settings account. Default: __txp-fr__ (the french TXP community network).
+>    `account`: integer (required). Your Twitter account number. This is a 18 digit number. You can find it when you create a new Widget from your settings account. Default: __txp-fr__ (the french TXP community network).
 > 
 >    `max_tweets`: integer (optional). The number of Tweets to display. Default: __3__.
 > 
